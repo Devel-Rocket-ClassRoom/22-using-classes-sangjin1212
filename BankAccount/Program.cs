@@ -1,4 +1,14 @@
 using System;
+BankAccount bankAccount = new BankAccount
+{
+    AccountNumber = "123-456-789",
+    OwnerName = "홍길동",
+};
 
-// README.md를 읽고 아래에 코드를 작성하세요.
-Console.WriteLine("코드를 작성하세요.");
+Console.WriteLine($"[계좌 정보]({bankAccount.AccountNumber}) ({bankAccount.OwnerName} - 잔액 {bankAccount.Balance})");
+class BankAccount
+{
+    public string AccountNumber { get; set; }
+    public string OwnerName { get; set; }
+    public int Balance { get; set; }
+}
